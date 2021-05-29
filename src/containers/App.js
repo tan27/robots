@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
-import CardList from './CardList.js';
+import CardList from '../components/CardList.js';
+import Searchbox from '../components/Searchbox.js';
+import Scroll from '../components/Scroll.js';
+import './App.css';
 import 'tachyons';
-// import { robots } from './robots';
-import Searchbox from './Searchbox.js';
-import './App.css'
-import Scroll from './Scroll.js';
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            robots: [],
+            robots:[],
             searchfield: ''
         }
     }
@@ -43,7 +42,7 @@ class App extends Component {
         } else {
         return (
             <>
-            <h1 className='tc'>Robots</h1>
+            <h1 className='tc f2'>Robots</h1>
             <Searchbox searchChange = {this.onSearchChange} />
             <Scroll>
             <CardList robots={ filteredRobots } />
