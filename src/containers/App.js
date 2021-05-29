@@ -24,7 +24,6 @@ class App extends Component {
 
     onSearchChange = (e) => {
         this.setState({searchfield: e.target.value})
-        console.log(e.target.value);
     }
 
     render() {
